@@ -1,4 +1,5 @@
 import MovieCard from "../components/MovieCard"
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { searchMovies, getPopularMovies } from "../services/api";
 import "../css/Home.css" 
@@ -42,6 +43,20 @@ function Home() {
             setLoading(false)
         }
     };
+=======
+import { useState } from "react";
+
+function Home() {
+    const [searchQuery, setSearchQuery] = useState("");
+
+    const movies = [
+        {id: 1, title: "John Wick", release_date: "2020"},
+        {id: 2, title: "Terminator", release_date: "1999"},
+        {id: 3, title: "The Matrix", release_date: "1998"},
+    ]
+
+    const handleSearch = () => {};
+>>>>>>> 9a0876d1c72deb9ce13bde5b48465adfa73c8189
 
     return (
     <div className="home">
@@ -53,6 +68,7 @@ function Home() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             />
+<<<<<<< HEAD
             <button type="submit" className="search-button">
                 Search
             </button>
@@ -72,8 +88,22 @@ function Home() {
             </div>
         )}    
    
+=======
+            <button type="submit" className="search-button">Search</button>
+        </form>
+
+        <div className="movies-grid">
+            {movies.map(movie => (
+                <MovieCard movie={movie} key={movie.id} />
+            ))}
+        </div>
+>>>>>>> 9a0876d1c72deb9ce13bde5b48465adfa73c8189
     </div>
     );
 }
 
+<<<<<<< HEAD
 export default Home;
+=======
+export default Home
+>>>>>>> 9a0876d1c72deb9ce13bde5b48465adfa73c8189

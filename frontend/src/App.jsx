@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './css/App.css'
 import Favorites from './pages/Favorites'
 import Home from './pages/Home'
@@ -16,6 +17,16 @@ function App() {
       </Routes>
     </main>
     </MovieProvider>
+=======
+import './App.css'
+import Home from './pages/Home'
+
+function App() {
+  return (
+    <>
+      <Home/>
+    </>
+>>>>>>> 9a0876d1c72deb9ce13bde5b48465adfa73c8189
   )
 }
 
